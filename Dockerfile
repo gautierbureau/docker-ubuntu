@@ -1,6 +1,9 @@
 FROM ubuntu:latest
 
-RUN apt-get upgrade && apt-get update && apt-get install -y \
+RUN apt-get install -y apt-utils 
+&& apt-get upgrade 
+&& apt-get update 
+&& apt-get install -y \
 	apt-utils \
 	ca-certificates \
 	gcc \
@@ -16,6 +19,7 @@ RUN apt-get upgrade && apt-get update && apt-get install -y \
 	g++ \
 	ssh \
 	gfortran \
+	emacs \
 && apt-get update \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
