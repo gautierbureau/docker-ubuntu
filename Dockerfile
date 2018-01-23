@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get upgrade && apt-get update && apt-get install -y \
+	apt-utils \
 	ca-certificates \
 	gcc \
 	gdb \
@@ -14,6 +15,7 @@ RUN apt-get upgrade && apt-get update && apt-get install -y \
 	cmake \
 	g++ \
 	ssh \
+	gfortran \
 && apt-get update \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
