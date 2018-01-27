@@ -22,13 +22,16 @@ RUN apt-get upgrade \
 	iputils-ping \
 	python-pip \
 	ruby \
-&& pip install --upgrade pip
-&& pip install numpy
-&& pip install scipy
-&& pip install matplotlib
+	gnuplot \
+&& pip install --upgrade pip \
+&& pip install numpy \
+&& pip install scipy \
+&& pip install matplotlib \
 && apt-get update \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /Codes
 
 # Example very clever to install a library 
 # RUN apt-get update &&  apt-get install  -y \
