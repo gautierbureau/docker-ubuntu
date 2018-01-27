@@ -19,7 +19,7 @@ RUN apt-get upgrade \
 	ssh \
 	gfortran \
 	emacs \
-	ping \
+	iputils-ping \
 && apt-get update \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
