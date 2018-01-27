@@ -20,6 +20,12 @@ RUN apt-get upgrade \
 	gfortran \
 	emacs \
 	iputils-ping \
+	python-pip \
+	ruby \
+&& pip install --upgrade pip
+&& pip install numpy
+&& pip install scipy
+&& pip install matplotlib
 && apt-get update \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
